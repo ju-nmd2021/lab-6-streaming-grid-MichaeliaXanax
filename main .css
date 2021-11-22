@@ -96,6 +96,13 @@ body{
     width: 500px;
 }
 
+.Watch{
+    border-style: outset;
+    width: 100px;
+    height: auto;
+    margin: auto;
+}
+
 .top{
     font-size: 20px;
     color:white;
