@@ -8,54 +8,34 @@ body{
 .nav{
     background-color: rgb(255, 255, 255);
     overflow: hidden;
+    height: 50px;
     opacity: 50%;
     z-index: 1;
+    display: grid;
+    grid-template-columns:15% 15% 40% 15% 15%;
 }
 
-.logo{
-    float:left;
-    position:relative;
-    left:50%;
-    top: 9px
-}
-
-.user{
+.icon_navigation{
+    margin-left: 70px;
+    margin-top: 10px;
     content: '';
     width: 2em;
     height: 2em;
-    display: inline-block;
-    margin-left: 975px;
-    margin-top: 10px;
+}
+
+.user{
     background: url('https://api.iconify.design/ic/twotone-person-outline.svg') no-repeat center center / contain;
 }
 
 .menu{
-    content: '';
-    width: 2em;
-    height: 2em;
-    display: inline-block;
-    margin-left: -950px;
-    margin-top: 10px;
     background: url('https://api.iconify.design/ic/twotone-notes.svg') no-repeat center center / contain;
 }
 
 .setting{
-    content: '';
-    width: 2em;
-    height: 2em;
-    display: inline-block;
-    margin-left: 1000px;
-    margin-top: 10px;
     background:url('https://api.iconify.design/ant-design/setting-twotone.svg') no-repeat center center / contain;
 }
 
 .search{
-    content: '';
-    width: 2em;
-    height: 2em;
-    display: inline-block;
-    margin-left: -950px;
-    margin-top: 10px;
     background: url('https://api.iconify.design/ic/baseline-search.svg') no-repeat center center / contain;
 }
 
@@ -106,18 +86,12 @@ body{
     height: 40px;
 }
 
-.watch:hover{background-color: rgba(0, 0, 0, 0.8);}
-
 .moviegrid{
     display: grid;
     grid-gap: 20px;
     grid-template-columns:repeat(6,auto);
     grid-template-rows: 250px;
     margin-top: -25px;
-}
-
-img{
-    width: 100%;
 }
 
 .grid-item{
@@ -152,3 +126,92 @@ img{
     margin-left: 10px;
     font-weight: bold;
 }
+
+/*responsive for header*/
+@media only screen and (max-width:800px){
+    .nav{
+        background-color: rgb(255, 255, 255);
+        overflow: hidden;
+        height: 40px;
+        opacity: 50%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns:repeat(5,20%);
+    }
+
+    .icon_navigation{
+        margin-left: 40px;
+        height: 1.5em;
+        width: 1.5em;
+    }
+}
+
+/*responsive for body*/
+@media only screen and (max-width:800px){
+    .bigposter{
+        position:absolute;
+        z-index: -1;
+        width: 100%;
+        height: 400px;
+        top: -50px;
+    }
+    
+    .movieposter{
+        position:relative;
+        background-size: cover;
+        background-position:center;
+        width: 100%;
+        height: 100%;
+        opacity: 80%;
+    }
+
+    .intro{
+        display: none;
+    }
+}
+
+/*responsive for movie*/
+@media only screen and (max-width:800px){
+    .moviegrid{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns:repeat(3,auto);
+        grid-template-rows: repeat(2,auto);
+
+    }
+    
+    .grid-item{
+        border: 1px solid rgba(0, 0, 0, 0.8);
+    }
+    
+    .item-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .top{
+        font-size: 25px;
+        color:white;
+        margin-top: 330px;
+        margin-left: 7px;
+        font-weight: bold;
+    
+    }
+    
+    .Popular{
+        font-size: 25px;
+        color:white;
+        margin-left: 7px;
+        font-weight: bold;
+    }
+    
+    .Comedy{
+        font-size: 25px;
+        color:white;
+        margin-left: 7px;
+        font-weight: bold;
+    }
+    
+}
+
