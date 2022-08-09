@@ -1,208 +1,218 @@
-body{
-    background-color: black;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin:0;
-    padding: 0;
+body {
+  background-color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.nav{
+.nav {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  height: 50px;
+  opacity: 50%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 15% 15% 40% 15% 15%;
+}
+
+.icon_navigation {
+  margin-left: 70px;
+  margin-top: 10px;
+  content: "";
+  width: 2em;
+  height: 2em;
+}
+
+.user {
+  background: url("https://api.iconify.design/ic/twotone-person-outline.svg")
+    no-repeat center center / contain;
+}
+
+.menu {
+  background: url("https://api.iconify.design/ic/twotone-notes.svg") no-repeat
+    center center / contain;
+}
+
+.setting {
+  background: url("https://api.iconify.design/ant-design/setting-twotone.svg")
+    no-repeat center center / contain;
+}
+
+.search {
+  background: url("https://api.iconify.design/ic/baseline-search.svg") no-repeat
+    center center / contain;
+}
+
+.poster {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 600px;
+  top: -50px;
+}
+
+.CYE {
+  position: relative;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/I/71ose3+XW4L._RI_.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 80%;
+}
+
+.introduction {
+  position: absolute;
+  z-index: 1;
+  display: inline;
+  color: white;
+  top: 360px;
+  left: 50px;
+  font-size: 20px;
+}
+
+.Int {
+  margin-top: -20px;
+  text-align: justify;
+  font-size: 15px;
+  width: 500px;
+}
+
+.tag {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.tag1 {
+  position: absolute;
+  width: 50px;
+  height: auto;
+}
+
+.tag2 {
+  position: absolute;
+  left: 70px;
+  width: 100px;
+}
+
+.tag3 {
+  position: absolute;
+  left: 190px;
+  width: 80px;
+}
+
+.add {
+  position: relative;
+  font-size: 25px;
+  top: 40px;
+  width: 90px;
+}
+
+.nav2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 50px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 500px;
+}
+
+.grid {
+  font-weight: 800;
+  font-size: large;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  margin-left: 120px;
+}
+
+.grid:hover {
+  color: rgb(248, 214, 18);
+}
+
+.grid1 {
+  color: rgb(248, 214, 18);
+  text-decoration: underline;
+}
+
+.about {
+  padding: 100px;
+  margin-top: -100px;
+  color: white;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+}
+
+/*responsive for header*/
+@media only screen and (max-width: 800px) {
+  .nav {
     background-color: rgb(255, 255, 255);
     overflow: hidden;
-    height: 50px;
+    height: 40px;
     opacity: 50%;
     z-index: 1;
     display: grid;
-    grid-template-columns:15% 15% 40% 15% 15%;
-}
+    grid-template-columns: repeat(5, 20%);
+  }
 
-.icon_navigation{
-    margin-left: 70px;
-    margin-top: 10px;
-    content: '';
-    width: 2em;
-    height: 2em;
-}
+  .icon_navigation {
+    margin-left: 40px;
+    height: 1.5em;
+    width: 1.5em;
+  }
 
-.user{
-    background: url('https://api.iconify.design/ic/twotone-person-outline.svg') no-repeat center center / contain;
-}
-
-.menu{
-    background: url('https://api.iconify.design/ic/twotone-notes.svg') no-repeat center center / contain;
-}
-
-.setting{
-    background:url('https://api.iconify.design/ant-design/setting-twotone.svg') no-repeat center center / contain;
-}
-
-.search{
-    background: url('https://api.iconify.design/ic/baseline-search.svg') no-repeat center center / contain;
-}
-
-.poster{
+  .poster {
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 600px;
+    height: 400px;
     top: -50px;
-}
+  }
 
-.CYE{
+  .CYE {
     position: relative;
-    background-image: url(https://wikiany.net/wp-content/uploads/2020/08/5f3b655525e8d.jpg);
+    background-position: center;
     background-size: cover;
     width: 100%;
     height: 100%;
     opacity: 80%;
-}
-
-.introduction{
-    position:absolute;
-    z-index:1;
-    display:inline;
-    color:white;
-    top:360px;
-    left:50px;
-    font-size: 20px;}
-
-.Int{
-    margin-top: -20px;
-    text-align: justify;
-    font-size: 15px;
-    width: 500px;
-}
-
-.tag{
-    font-size: 15px;
-    text-align: center;
-    color: white;
-    border:2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.4);   
-}
-
-.tag1{
-    position:absolute;
-    width: 50px;
-    height: auto;}
-
-.tag2{
-    position: absolute;
-    left:70px;
-    width:100px;
-}
-
-.tag3{
-    position: absolute;
-    left:190px;
-    width:80px;
-}
-
-.add{
-    position:relative;
-    font-size: 25px;
-    top:40px;
-    width: 90px;
-}
-
-.nav2{
-    color: white;
-    background-color:rgba(0,0,0,0.7);
-    height: 50px;
-    z-index: 1;
-    display: grid;
-    grid-template-columns:repeat(3,auto);
-    margin-top:500px;
-}
-
-.grid{
-    font-weight: 800;
-    font-size:large;
-    text-align: center;
-    line-height: 50px;
-    height:50px;
-    margin-left: 120px;
-}
-
-.grid:hover{color: rgb(248, 214, 18);}
-
-.grid1{
-    color: rgb(248,214,18);
-    text-decoration: underline;}
-
-.about{
-    padding: 100px;
-    margin-top: -100px;
-    color: white;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, auto);
-}
-
-/*responsive for header*/
-@media only screen and (max-width:800px){
-    .nav{
-        background-color: rgb(255, 255, 255);
-        overflow: hidden;
-        height: 40px;
-        opacity: 50%;
-        z-index: 1;
-        display: grid;
-        grid-template-columns:repeat(5,20%);
-    }
-
-    .icon_navigation{
-        margin-left: 40px;
-        height: 1.5em;
-        width: 1.5em;
-    }
-
-    .poster{
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 400px;
-        top: -50px;
-    }
-    
-    .CYE{
-        position: relative;
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        opacity: 80%;
-    }
+  }
 }
 
 /*responsive for body*/
-@media only screen and (max-width:800px){
-    .introduction{
-        display: none;
-    }
+@media only screen and (max-width: 800px) {
+  .introduction {
+    display: none;
+  }
 
-    .nav2{
-        color: white;
-        background-color:rgba(0,0,0,0.7);
-        overflow: hidden;
-        height: 50px;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        margin-top:300px;
-    }
+  .nav2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    height: 50px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 300px;
+  }
 
-    .grid{
-        font-weight: 800;
-        font-size:large;
-        text-align: center;
-        line-height: 50px;
-        height:50px;
-        margin-left: 20px;
-    }
+  .grid {
+    font-weight: 800;
+    font-size: large;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    margin-left: 20px;
+  }
 
-    .about{
-        margin-top: 10px;
-        padding: 50px;
-    }
+  .about {
+    margin-top: 10px;
+    padding: 50px;
+  }
 }
